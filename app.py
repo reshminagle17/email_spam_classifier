@@ -5,6 +5,11 @@ from nltk.corpus import stopwords
 import nltk
 from nltk.stem.porter import PorterStemmer
 ps=PorterStemmer()
+import nltk
+
+# Punkt tokenizer download karo (once at runtime)
+nltk.download('punkt', download_dir='/tmp')
+nltk.data.path.append('/tmp')
 
 
 def transform_text(text):
