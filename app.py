@@ -6,13 +6,23 @@ import nltk
 from nltk.stem.porter import PorterStemmer
 ps=PorterStemmer()
 import nltk
-
-# Punkt tokenizer download karo (once at runtime)
-nltk.download('punkt', download_dir='/tmp')
-# Extra punkt_tab tokenizer
-nltk.download('punkt_tab', download_dir='/tmp')
 nltk.data.path.append('/tmp')
 
+try:
+    nltk.data.find('tokenizers/punkt')
+except:
+    nltk.download('punkt', download_dir='/tmp')
+
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+except:
+    nltk.download('punkt_tab', download_dir='/tmp')
+
+try:
+    nltk.data.find('corpora/stopwords')
+except:
+    nltk.download('stopwords', download_dir='/tmp')
+#-------------------------------
 
 def transform_text(text):
     # lower case
