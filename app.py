@@ -9,6 +9,8 @@ import nltk
 
 # Punkt tokenizer download karo (once at runtime)
 nltk.download('punkt', download_dir='/tmp')
+# Extra punkt_tab tokenizer
+nltk.download('punkt_tab', download_dir='/tmp')
 nltk.data.path.append('/tmp')
 
 
